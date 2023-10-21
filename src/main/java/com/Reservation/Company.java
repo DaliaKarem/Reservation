@@ -27,7 +27,7 @@ public class Company {
     {
         for (int i=0;i<5;i++)
         {
-            FlightsInfo.add(new Flights(i, "Martin Nadine "+i, "New York "+i, "London "+i, "2022-08-01 "+i, 1, 700.00));
+            FlightsInfo.add(new Flights(i, "Martin Nadine "+i, "New York "+i, "London "+i, "2022-08-01 "+i, 700.00));
         }
     }
     //show Hotels info
@@ -47,7 +47,8 @@ public class Company {
         System.out.println("Our Flights  : ");
         for (int i=0;i<HotelsInfo.size();i++)
         {
-            System.out.println(i +" :" +FlightsInfo.get(i).getDate() +"  from "+FlightsInfo.get(i).getOrigin()+" To "+FlightsInfo.get(i).getDestination());
+            System.out.println(FlightsInfo.get(i).toString());
+            //System.out.println(i +" :" +FlightsInfo.get(i).getDate() +"  from "+FlightsInfo.get(i).getOrigin()+" To "+FlightsInfo.get(i).getDestination()+ " Free Sets : "+FlightsInfo.get(i).getNumPassengers());
         }
     }
     //offers

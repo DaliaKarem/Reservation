@@ -8,8 +8,18 @@ public class Bank {
 
     public Bank() {
         accounts = new ArrayList < Account > ();
+        add();
     }
+    public void add()
+    {
+        Account account1 = new Account("Ahmed ", "A000", 50000);
+        Account account2 = new Account("Mohamed", "M001", 45000);
+        Account account3 = new Account("Mostafa ", "MO002", 20000);
 
+        addAccount(account1);
+        addAccount(account2);
+        addAccount(account3);
+    }
     public void addAccount(Account account) {
         accounts.add(account);
     }

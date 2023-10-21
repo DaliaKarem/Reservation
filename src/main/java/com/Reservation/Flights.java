@@ -6,18 +6,29 @@ public class Flights {
     private String origin;
     private String destination;
     private String date;
-    private int numPassengers;
+    private int numPassengers=30;
+    private int numPassengers_WantToReserve;
     private double price;
     private int confirmationNumber;
     public Flights(){};
-    public Flights(int flightNumber, String passengerName, String origin, String destination, String date, int numPassengers, double price) {
+    public Flights(int flightNumber, String passengerName, String origin, String destination, String date, double price) {
         this.flightNumber = flightNumber;
         this.passengerName = passengerName;
         this.origin = origin;
         this.destination = destination;
         this.date = date;
-        this.numPassengers = numPassengers;
+       // this.numPassengers_WantToReserve=numPassengers_WantToReserve;
+        this.numPassengers = 30;
         this.price = price;
+    }
+
+
+    public void setNumPassengers_WantToReserve(int numPassengers_WantToReserve) {
+        this.numPassengers_WantToReserve = numPassengers_WantToReserve;
+    }
+
+    public int getNumPassengers_WantToReserve() {
+        return numPassengers_WantToReserve;
     }
 
     public double getPrice() {
@@ -67,11 +78,6 @@ public class Flights {
     public void setFlightNumber(int flightNumber) {
         this.flightNumber = flightNumber;
     }
-
-    public void setNumPassengers(int numPassengers) {
-        this.numPassengers = numPassengers;
-    }
-
     public void setOrigin(String origin) {
         this.origin = origin;
     }
@@ -83,19 +89,20 @@ public class Flights {
     public void setPrice(double price) {
         this.price = price;
     }
-
-
+    public int addNumPass(int pass)
+    {
+       return this.numPassengers-=pass;
+    }
     @Override
     public String toString() {
-        return "Flights{" +
-                "flightNumber=" + flightNumber +
-                ", passengerName='" + passengerName + '\'' +
+        //NumPass =30 in Flight
+        return "flightNumber=" + flightNumber +
+                ", passengerNumber='" + numPassengers + '\'' +
                 ", origin='" + origin + '\'' +
                 ", destination='" + destination + '\'' +
                 ", date='" + date + '\'' +
                 ", numPassengers=" + numPassengers +
-                ", price=" + price +
-                ", confirmationNumber=" + confirmationNumber +
-                '}';
+                ", price=" + price
+                ;
     }
 }
