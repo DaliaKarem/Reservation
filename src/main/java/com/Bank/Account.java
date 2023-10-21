@@ -46,4 +46,5 @@ public class Account {
     public String getAccountInfo() {
         return "Name: " + name + ", Account Number: " + accountNumber + ", Balance: " + balance;
     }
+
 }

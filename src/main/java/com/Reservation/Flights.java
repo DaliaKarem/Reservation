@@ -1,5 +1,11 @@
 package com.Reservation;
 
+import com.Bank.Account;
+import javafx.util.Pair;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Flights {
     private int flightNumber;
     private String passengerName;
@@ -93,6 +99,7 @@ public class Flights {
     {
        return this.numPassengers-=pass;
     }
+
     @Override
     public String toString() {
         //NumPass =30 in Flight

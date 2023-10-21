@@ -54,4 +54,18 @@ public class Hotel {
     public void setConfirmationNumber(int confirmationNumber) {
         this.confirmationNumber = confirmationNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "hotelId=" + hotelId +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", checkIn='" + checkIn + '\'' +
+                ", checkOut='" + checkOut + '\'' +
+                ", numGuests=" + numGuests +
+                ", price=" + price +
+                ", confirmationNumber=" + confirmationNumber +
+                '}';
+    }
 }
